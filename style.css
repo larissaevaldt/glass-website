@@ -3,3 +3,56 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* main is the background */
+main {
+  min-height: 100vh; /* take up the full space of the monitor */
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  /* center the child glass section to the middle of the page*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* glass is the main square with the dashboard and active games */
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  /* making the section look transparent, like a glass effect */
+  /* using rgba, that allows us to control the opacity */
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  /*z-index will  make the main square to be on the front and the circles to the back, this just needs to be a higher number than 1 which is the default.*/
+  z-index: 2;
+  /* Add the blur effect */
+  backdrop-filter: blur(2rem);
+}
+
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem; /* add a fixed height and width */
+  width: 20rem;
+  /* By adding postion absolute we can move this around wherever we want*/
+  position: absolute;
+  /* making the div's circles instead of squares */
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 10%;
+}
