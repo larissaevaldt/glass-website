@@ -45,7 +45,7 @@ main {
   /* By adding postion absolute we can move this around wherever we want*/
   position: absolute;
   /* making the div's circles instead of squares */
-  border-radius: 50%;
+  border-radius: 50%; /* height and width must be the same for it to work*/
 }
 
 .circle1 {
